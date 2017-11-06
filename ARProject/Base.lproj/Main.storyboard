@@ -1,27 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="87n-6b-GLV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHe-dV-OaB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-v2-Nhe">
+                                <rect key="frame" x="0.0" y="629" width="91" height="38"/>
+                                <color key="backgroundColor" red="0.39704183614089694" green="1" blue="0.95024102319637138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="gD5-tj-amG"/>
+                                    <constraint firstAttribute="width" constant="91" id="ppw-tq-W0t"/>
+                                </constraints>
+                                <state key="normal" title="Add Obj"/>
+                                <connections>
+                                    <action selector="addCube:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1LM-Oi-kNy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi6-tQ-XyP">
+                                <rect key="frame" x="295" y="629" width="80" height="38"/>
+                                <color key="backgroundColor" red="1" green="0.37889890636858903" blue="0.31487835592459124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2sI-ns-urR"/>
+                                    <constraint firstAttribute="height" constant="38" id="oG2-LW-SuL"/>
+                                </constraints>
+                                <state key="normal" title="Add Obj2"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mnn-v2-Nhe" firstAttribute="bottom" secondItem="Sgx-gB-YIR" secondAttribute="bottom" id="7MO-Dz-KHW"/>
+                            <constraint firstItem="FHe-dV-OaB" firstAttribute="top" secondItem="87n-6b-GLV" secondAttribute="top" id="B8i-aY-DBA"/>
+                            <constraint firstItem="FHe-dV-OaB" firstAttribute="trailing" secondItem="Sgx-gB-YIR" secondAttribute="trailing" id="I4C-gR-LZx"/>
+                            <constraint firstItem="Gi6-tQ-XyP" firstAttribute="bottom" secondItem="Sgx-gB-YIR" secondAttribute="bottom" id="aed-Oj-vrL"/>
+                            <constraint firstItem="Mnn-v2-Nhe" firstAttribute="leading" secondItem="Sgx-gB-YIR" secondAttribute="leading" id="cEK-Qm-1Hs"/>
+                            <constraint firstItem="FHe-dV-OaB" firstAttribute="leading" secondItem="Sgx-gB-YIR" secondAttribute="leading" id="enl-Bg-GFw"/>
+                            <constraint firstItem="Gi6-tQ-XyP" firstAttribute="trailing" secondItem="Sgx-gB-YIR" secondAttribute="trailing" id="y8Z-cD-XBs"/>
+                            <constraint firstItem="FHe-dV-OaB" firstAttribute="bottom" secondItem="Sgx-gB-YIR" secondAttribute="bottom" id="zZl-7x-eTb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sgx-gB-YIR"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="sceneView" destination="FHe-dV-OaB" id="e0g-Z8-lhM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="92.203898050974516"/>
         </scene>
     </scenes>
 </document>
